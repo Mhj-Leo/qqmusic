@@ -128,6 +128,6 @@ export default {
             border:none;
             color:#fff;
             font-size:18px;
-						border-radius:25px;
+			border-radius:25px;
         }
     </style>

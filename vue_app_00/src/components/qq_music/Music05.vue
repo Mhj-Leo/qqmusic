@@ -183,27 +183,27 @@
 			</div>
 			<div class="gs">
 				<div class="rm">
-					<img src="../../assets/xzq.jpg" />
+					<img src="../../../public/img/xzq.jpg" />
 					<p>薛之谦</p>
 				</div>
 				<div class="rm">
-					<img src="../../assets/xzq.jpg" />
+					<img src="../../../public/img/xzq.jpg" />
 					<p>薛之谦</p>
 				</div>
 				<div class="rm">
-					<img src="../../assets/xzq.jpg" />
+					<img src="../../../public/img/xzq.jpg" />
 					<p>薛之谦</p>
 				</div>
 				<div class="rm">
-					<img src="../../assets/xzq.jpg" />
+					<img src="../../../public/img/xzq.jpg" />
 					<p>薛之谦</p>
 				</div>
 				<div class="rm">
-					<img src="../../assets/xzq.jpg" />
+					<img src="../../../public/img/xzq.jpg" />
 					<p>薛之谦</p>
 				</div>
 				<div class="rm">
-					<img src="../../assets/xzq.jpg" />
+					<img src="../../../public/img/xzq.jpg" />
 					<p>薛之谦</p>
 				</div>
 			</div>
