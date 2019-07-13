@@ -1,5 +1,7 @@
 <template>
+<div>
 	<div class="container">
+	<div>
 		<div class="f4">
 			<div class="ph">
 					<div>排行榜</div>
@@ -183,27 +185,27 @@
 			</div>
 			<div class="gs">
 				<div class="rm">
-					<img src="../../../public/img/xzq.jpg" />
+					<img src="../../public/img/index/xzq.jpg" />
 					<p>薛之谦</p>
 				</div>
 				<div class="rm">
-					<img src="../../../public/img/xzq.jpg" />
+					<img src="../../public/img/index/xzq.jpg" />
 					<p>薛之谦</p>
 				</div>
 				<div class="rm">
-					<img src="../../../public/img/xzq.jpg" />
+					<img src="../../public/img/index/xzq.jpg" />
 					<p>薛之谦</p>
 				</div>
 				<div class="rm">
-					<img src="../../../public/img/xzq.jpg" />
+					<img src="../../public/img/index/xzq.jpg" />
 					<p>薛之谦</p>
 				</div>
 				<div class="rm">
-					<img src="../../../public/img/xzq.jpg" />
+					<img src="../../public/img/index/xzq.jpg" />
 					<p>薛之谦</p>
 				</div>
 				<div class="rm">
-					<img src="../../../public/img/xzq.jpg" />
+					<img src="../../public/img/index/xzq.jpg" />
 					<p>薛之谦</p>
 				</div>
 			</div>
@@ -256,26 +258,42 @@
 				</div>
 			</div>
 		</div>
+		</div>
+	</div>
+	<MyFooter></MyFooter>
 	</div>
 </template>
 
 <script>
+	import MyFooter from "../components/qq_music/MyFooter"
     export default {
-        data(){
-            return {
-
-            }
-        }
-    }
+       data(){
+            return{
+				p:[]
+    		}
+  },
+  created(){
+      //发送ajax请求 axios
+            var url="index";//请求地址
+            this.axios.get(url).then(result=>{
+				console.log(result)
+                console.log(result.data[0])
+            })
+  },
+	components:{
+		MyFooter
+	}
+}
 </script>
 
 <style scoped>
     .container{
-        width:1200px;
-        margin:0 auto;
+        width:100%;
     }
 	.f4,.f5,.f6,.f7{
-		width:100%;
+		width:1200px;
+        margin:0 auto;
+		
 		margin-bottom:60px;
 	}
 	.ph{
