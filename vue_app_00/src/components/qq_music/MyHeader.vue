@@ -9,11 +9,11 @@
                 <li><a href="javascript:;">音乐人</a></li>
                 <li><a href="javascript:;">演出</a></li>
                 <li>
-                    <input type="text" placeholder="请输入歌词 歌名 歌手或专辑">    
+                    <input type="text" placeholder="请输入歌名 歌手或专辑">    
                 </li>
 				<li id="login">
                     <a href="javascript:;">登录</a> 
-                        <a href="javascript:;">注册</a></li>
+                    <a href="javascript:;">注册</a></li>
             </ul>   
         </div>
 </template>
@@ -58,6 +58,7 @@
 		#login>a{
 				font-size:20px;
 		}
+        #login>a:nth-child(2):before{content:"|"}
 		#login>a:hover{
 				color:red;
 

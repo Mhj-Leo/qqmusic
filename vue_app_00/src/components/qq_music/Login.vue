@@ -105,7 +105,7 @@ export default {
             text-align: center;
             position:absolute;
             top:100px;
-            left:1100px;
+            left:900px;
         }
         #container>table td a{
             color:#fff;

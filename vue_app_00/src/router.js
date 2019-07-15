@@ -7,6 +7,7 @@ import Login from "./components/qq_music/Login"
 import Reg from "./components/qq_music/Reg"
 import Jump from "./views/Jump"
 import Index from "./views/Index"
+import indexhdd from "./views/indexhdd"
 import MyFooter from "./components/qq_music/MyFooter"
 import MyHeader from "./components/qq_music/MyHeader"
 Vue.use(Router)
@@ -16,6 +17,7 @@ export default new Router({
     {path:'/Reg',component:Reg},
     {path:'/Jump',component:Jump},
     {path:'/Index',component:Index},
+    {path:'/indexhdd',component:indexhdd},
     {path:'/MyFooter',component:MyFooter},
     {path:'/MyHeader',component:MyHeader},
   ]
