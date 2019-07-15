@@ -27,7 +27,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <button id="login">登录</button>
+                    <button id="login" @click="login">登录</button>
                 </td>
             </tr>
 						<tr>
@@ -86,7 +86,7 @@ export default {
     },
 }
 </script>
-<style>
+<style scoped>
         #container{
             width:1900px;
             height:900px;
@@ -105,7 +105,7 @@ export default {
             text-align: center;
             position:absolute;
             top:100px;
-            left:1100px;
+            left:900px;
         }
         #container>table td a{
             color:#fff;
@@ -128,6 +128,6 @@ export default {
             border:none;
             color:#fff;
             font-size:18px;
-						border-radius:25px;
+			border-radius:25px;
         }
     </style>

@@ -19,12 +19,12 @@
 	<div id="Mcontainer">
 		<div id="left">
 			<ul>
-				<li><img src="../../../public/img/jump/列表.png" alt=""><a href="">临时列表</a></li>
-				<li><img src="../../../public/img/jump/记录.png" alt=""><a href="">播放记录</a></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""><a href="">我最常听</a></li>
-				<li><img src="../../../public/img/jump/下载.png" alt=""><a href="">下载历史</a></li>
-				<li><img src="../../../public/img/jump/购买.png" alt=""><a href="">已购音乐</a></li>
-				<li><img src="../../../public/img/jump/直播.png" alt=""><a href="">音乐直播</a></li>
+				<li><img src="../../public/img/jump/列表.png" alt=""><a href="">临时列表</a></li>
+				<li><img src="../../public/img/jump/记录.png" alt=""><a href="">播放记录</a></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""><a href="">我最常听</a></li>
+				<li><img src="../../public/img/jump/下载.png" alt=""><a href="">下载历史</a></li>
+				<li><img src="../../public/img/jump/购买.png" alt=""><a href="">已购音乐</a></li>
+				<li><img src="../../public/img/jump/直播.png" alt=""><a href="">音乐直播</a></li>
 				<li><input type="text"></li>
 				<li></li>
 			</ul>
@@ -132,32 +132,32 @@
 				<li><a href="">《她说》</a></li>
 			</ul>
 			<ul>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
-				<li><img src="../../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
+				<li><img src="../../public/img/jump/喜欢.png" alt=""></li>
 			</ul>
 		</div>
 		<div id="right">
-			<img src="../../../public/img/jump/kk.png" alt="">
+			<img src="../../public/img/jump/kk.png" alt="">
 			<div id="geci">
 				<p>不怕相思苦</p>
 				<p>只怕你伤痛</p>
@@ -194,7 +194,7 @@ export default {
     },
 }
 </script>
-<style>
+<style scoped>
     #container{background:transparent;}
      #top{
 			width:100%;

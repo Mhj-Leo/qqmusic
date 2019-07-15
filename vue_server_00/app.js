@@ -71,3 +71,18 @@ var sql = "INSERT INTO qq_music_user VALUES (?,?,?,?,?)";
       }
   })
 })
+//完成第三个功能：主页面数据获取
+server.get("/index",(req,res)=>{
+  //1:参数
+  //2:sql
+  var sql=`SELECT * FROM qq_music_index_product where seq_recommended!=0 ORDER BY seq_recommended`;
+  //3:json
+  pool.query(sql,[],(err,result)=>{
+    if(err){
+      console.log(err);
+      res.send({code:0});
+    }else{
+      res.send(result);
+    }
+  })
+})

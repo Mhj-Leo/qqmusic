@@ -64,24 +64,25 @@ export default {
             var e=this.email;
             var ph=this.phone;
             //2.创建一个正则表达式,字母数字下划线，3-12位
-            var reg=/^[a-z0-9_]{3,12}$/i;
+            var reg1=/^[a-z0-9_]{3,12}$/i;
+            var reg2=/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)$/i;
             //3.验证用户名，出错提示
-            if(!reg.test(n)){
+            if(!reg1.test(n)){
                 alert("用户名格式不正确");
                 return;
             }
             //4.验证密码，出错提示
-            if(!reg.test(p)){
+            if(!reg1.test(p)){
                 alert("密码格式不正确");
                 return;
             }
             //验证邮箱
-            if(!reg.test(e)){
+            if(!reg2.test(e)){
                 alert("邮箱格式不正确");
                 return;
             }
             //验证手机号
-            if(!reg.test(ph)){
+            if(!reg1.test(ph)){
                 alert("手机号格式不正确");
                 return;
             }
