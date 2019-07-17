@@ -30,7 +30,7 @@
                     <button id="login" @click="login">登录</button>
                 </td>
             </tr>
-						<tr>
+			<tr>
                 <td colspan="2">
                     <img src="../../../public/img/login/weibo.png" alt="">
                     <img src="../../../public/img/login/qq.png" alt="">
@@ -89,26 +89,26 @@ export default {
 <style scoped>
         #container{
             width:1900px;
-            height:900px;
+            height:600px;
             background: url("../../../public/img/login/login_bg.jpg");
             position:relative;
         }
-				#l1{
-					font-size:25px;
-				}
+		#l1{
+			font-size:25px;
+		}
         #container>table{
-            width:500px;
+            width:400px;
             height:400px;
             border:1px solid #fff;
-            background:rgba(0,0,0,0.3);
-            color:#fff;
+            background:#fff;
+            color:#000;
             text-align: center;
             position:absolute;
             top:100px;
             left:900px;
         }
         #container>table td a{
-            color:#fff;
+            color:#000;
             text-decoration: none;
         }
 				#container>table img{
@@ -122,8 +122,8 @@ export default {
             border-radius: 5px;
         }
         #login{
-            background: #27b0f6;
-            width:300px;
+            background: red;
+            width:280px;
             height:50px;
             border:none;
             color:#fff;

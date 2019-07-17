@@ -58,7 +58,7 @@ export default {
 }
     #foot{
             width:1200px;
-            height:500px;
+            height:400px;
             margin:0 auto;
         }
         #foot-item{
@@ -124,7 +124,7 @@ export default {
         }
         #foot-text{
             text-align: center;
-            margin-top:80px;
+            margin-top:60px;
         }
         #foot-text p{
             color:#939393;

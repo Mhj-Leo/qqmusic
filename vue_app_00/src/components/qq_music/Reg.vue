@@ -7,7 +7,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <input type="text" 
+                    用户名：<input type="text" 
                     placeholder="请输入用户名"
                     id="uname"
                     v-model="uname">
@@ -15,7 +15,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <input type="password" 
+                    密码：<input type="password" 
                     placeholder="请输入密码"
                     id="upwd"
                     v-model="upwd">
@@ -23,7 +23,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <input type="text" 
+                    邮箱：<input type="text" 
                     placeholder="请输入邮箱"
                     id="email"
                     v-model="email">
@@ -31,7 +31,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <input type="text"
+                    手机号：<input type="text"
                     placeholder="请输入手机号"
                     id="phone"
                     v-model="phone">
@@ -109,35 +109,36 @@ export default {
 <style scoped>
       #container{
             width:1900px;
-            height:900px;
+            height:600px;
             background: url("../../../public/img/reg/reg_bg.jpg");
             position:relative;
         }
         #container>table{
             width:300px;
-            height:300px;
+            height:400px;
             border:1px solid #fff;
-            background:rgba(0,0,0,0.3);
-            color:#fff;
+            background:#fff;
+            color:#000;
             text-align: center;
             position:absolute;
             top:100px;
-            left:1100px;
+            left:900px;
         }
         #container>table td a{
-            color:#fff;
+            color:#000;
             text-decoration: none;
         }
         #uname,#upwd,#email,#phone{
-            width:240px;
+            width:200px;
             height:28px;
             border-radius: 5px;
         }
         #reg{
-            background: #27b0f6;
+            background: red;
             width:200px;
             height:35px;
             border:none;
+            border-radius:25px;
             color:#fff;
             font-size:18px;
         }

@@ -37,35 +37,36 @@ export default {
       i:0,
       imgs:[
         {
-          src:"/images/carousel_item/carousel-1.jpg",
+          src:"http://business.cdn.qianqian.com/qianqian/pic/bos_client_1547466371f5a8864429456f49e904ab0430b8dc17.jpg@s_2,w_750,h_300",
           title:"《Ghost Mane》| STARR J与恶魔一起住在Dark Castle",
           to:"javascript:;"
         },
         { 
-          src:"/images/carousel_item/carousel-2.jpg",
+          src:"http://business.cdn.qianqian.com/qianqian/pic/bos_client_1562813869ec66a9354c83cfc4961554f8ad439d4e.jpg@s_2,w_750,h_300",
           title:"赐我们一首比“情歌而已”更值得唱的歌 声音碎片第三支预热单曲《送流水》首发",
           to:"javascript:;"
         },
         { 
-          src:"/images/carousel_item/carousel-3.jpg",
+          src:"http://business.cdn.qianqian.com/qianqian/pic/bos_client_1562840320531821f6439a9798a0f637ead1a16c7a.jpg@s_2,w_750,h_300",
           title:"我眼里只有一个3号他永远昂着头 | 黄旭全新单曲《低位》致敬韦德",
           to:"javascript:;"
         },
         { 
-          src:"/images/carousel_item/carousel-4.jpg",
+          src:"http://business.cdn.qianqian.com/qianqian/pic/bos_client_15631992653df037df34a95305ce066c2ff337ddde.jpg@s_2,w_750,h_300",
           title:"彭坦春晓携女率性玩音乐 Modern Sky Kids厂牌汇聚亲子市场新能量",
           to:"javascript:;"
         },
-        /*{ 
-          src:"/images/carousel_item/carousel-5.jpg",
+        { 
+          src:"http://business.cdn.qianqian.com/qianqian/pic/bos_client_1563159912178ec2e899ee6fa9041b58ce111555e2.jpg@s_2,w_750,h_300",
           title:"曾轶可另类创作再出击 全新单曲《Truly》真心上线",
           to:"javascript:;"
         },
         { 
-          src:"/images/carousel_item/carousel-6.jpg",
+          src:"http://business.cdn.qianqian.com/qianqian/pic/bos_client_15631992653df037df34a95305ce066c2ff337ddde.jpg@s_2,w_750,h_300",
           title:"16层新专辑先行单曲上线，精巧器乐铺排搭建诡异《失落园》",
           to:"javascript:;"
         },
+        /*
         { 
           src:"/images/carousel_item/carousel-7.jpg",
           title:"标题如歌” | OBi《爱你》温柔上线",
@@ -75,7 +76,8 @@ export default {
           src:"/images/carousel_item/carousel-8.jpg",
           title:"李大奔的硬核浪漫：如果不是你，随便谁都一样",
           to:"javascript:;"
-        }*/
+        }
+        */
       ],
       canClick:true,
       timer:null

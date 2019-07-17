@@ -16,12 +16,14 @@
             <span class="title">热门歌单</span>
             <span>更多</span>
             <div id="gd">
-                <a v-for="(elem,i) of imgList" :key="i" href="">
-				<img :src="elem.imgUrl" alt=""><p v-text="elem.title"></p>
-				</a>
-            </div>
+				<div :data-index="index" v-for="(elem,index) of task" :key="index"
+				@mouseenter="showBegin" @mouseleave="hideBegin">
+					<img :src="elem.pic" alt="">
+					<img :class="bClass[index]" src="../../public/img/index/begin.png" alt="">
+					<p v-text="elem.title"></p>
+				</div>
+				</div>
         </div>
-
         <div class="right">
             <span class="title">分类听歌</span>
             <span>更多</span>
@@ -57,174 +59,78 @@
 		<div class="f4">
 			<div class="ph">
 					<div>排行榜</div>
-					<p>更多</p>
+					<a href="javascript:;">更多</a>
 			</div>
 			<div class="dis">
 			<div class="xg">
 				<h2>新歌榜</h2>
 				<div>
-					<div  class="mx">
+					<div class="mx" v-for="(list,i) of task1" :key="i">
+						<div class="num" v-text="list.pid"></div>
+						<a href="javascript:;"><img :src="list.pic"/></a>
+						<div>
+							<div v-text="list.title"></div>
+							<div v-text="list.singer"></div>
+						</div>
+					</div>
+					<!--<div  class="mx">
 						<div>01</div>
 						<img src="http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_2,w_60,h_60" />
 						<div>
 							<div>木偶人</div>
 							<div>薛之谦</div>
 						</div>
-					</div>
-					<div class="mx">
-						<div>02</div>
-						<img src="http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_2,w_60,h_60" />
-						<div>
-							<div>木偶人</div>
-							<div>薛之谦</div>
-						</div>
-					</div>
-					<div class="mx">
-						<div>03</div>
-						<img src="http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_2,w_60,h_60" />
-						<div>
-							<div>木偶人</div>
-							<div>薛之谦</div>
-						</div>
-					</div>
-					<div class="mxh">
-						<div>04</div>
-						<img src="http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_2,w_60,h_60" />
-						<div>
-							<div>木偶人</div>
-							<div>薛之谦</div>
-						</div>
-					</div>
-					<div class="mxh">
-						<div>05</div>
-						<img src="http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_2,w_60,h_60" />
-						<div>
-							<div>木偶人</div>
-							<div>薛之谦</div>
-						</div>
-					</div>
-					<div class="mxh">
-						<div>06</div>
-						<img src="http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_2,w_60,h_60" />
-						<div>
-							<div>木偶人</div>
-							<div>薛之谦</div>
-						</div>
-					</div>
+					</div>-->
 					<div class="query">
-						查看完整榜单>
+						<a href="javascript:;">查看完整榜单></a>
 					</div>
 				</div>
 			</div>
-			<div class="xg">
-				<h2>新歌榜</h2>
+			<div class="rg">
+				<h2>热歌榜</h2>
 				<div>
-					<div  class="mx">
+					<div class="mx" v-for="(list,i) of task2" :key="i">
+						<div class="num" v-text="list.pid"></div>
+						<a href="javascript:;"><img :src="list.pic"/></a>
+						<div>
+							<div v-text="list.title"></div>
+							<div v-text="list.singer"></div>
+						</div>
+					</div>
+					<!--<div  class="mx">
 						<div>01</div>
 						<img src="http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_2,w_60,h_60" />
 						<div>
 							<div>木偶人</div>
 							<div>薛之谦</div>
 						</div>
-					</div>
-					<div class="mx">
-						<div>02</div>
-						<img src="http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_2,w_60,h_60" />
-						<div>
-							<div>木偶人</div>
-							<div>薛之谦</div>
-						</div>
-					</div>
-					<div class="mx">
-						<div>03</div>
-						<img src="http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_2,w_60,h_60" />
-						<div>
-							<div>木偶人</div>
-							<div>薛之谦</div>
-						</div>
-					</div>
-					<div class="mxh">
-						<div>04</div>
-						<img src="http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_2,w_60,h_60" />
-						<div>
-							<div>木偶人</div>
-							<div>薛之谦</div>
-						</div>
-					</div>
-					<div class="mxh">
-						<div>05</div>
-						<img src="http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_2,w_60,h_60" />
-						<div>
-							<div>木偶人</div>
-							<div>薛之谦</div>
-						</div>
-					</div>
-					<div class="mxh">
-						<div>06</div>
-						<img src="http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_2,w_60,h_60" />
-						<div>
-							<div>木偶人</div>
-							<div>薛之谦</div>
-						</div>
-					</div>
+					</div>-->
 					<div class="query">
-						查看完整榜单>
+						<a href="javascript:;">查看完整榜单></a>
 					</div>
 				</div>
 			</div>
-			<div class="xg">
-				<h2>新歌榜</h2>
+			<div class="wlg">
+				<h2>网络歌榜</h2>
 				<div>
-					<div  class="mx">
+					<div class="mx" v-for="(list,i) of task3" :key="i">
+						<div class="num" v-text="list.pid"></div>
+						<a href="javascript:;"><img :src="list.pic"/></a>
+						<div>
+							<div v-text="list.title"></div>
+							<div v-text="list.singer"></div>
+						</div>
+					</div>
+					<!--<div  class="mx">
 						<div>01</div>
 						<img src="http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_2,w_60,h_60" />
 						<div>
 							<div>木偶人</div>
 							<div>薛之谦</div>
 						</div>
-					</div>
-					<div class="mx">
-						<div>02</div>
-						<img src="http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_2,w_60,h_60" />
-						<div>
-							<div>木偶人</div>
-							<div>薛之谦</div>
-						</div>
-					</div>
-					<div class="mx">
-						<div>03</div>
-						<img src="http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_2,w_60,h_60" />
-						<div>
-							<div>木偶人</div>
-							<div>薛之谦</div>
-						</div>
-					</div>
-					<div class="mxh">
-						<div>04</div>
-						<img src="http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_2,w_60,h_60" />
-						<div>
-							<div>木偶人</div>
-							<div>薛之谦</div>
-						</div>
-					</div>
-					<div class="mxh">
-						<div>05</div>
-						<img src="http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_2,w_60,h_60" />
-						<div>
-							<div>木偶人</div>
-							<div>薛之谦</div>
-						</div>
-					</div>
-					<div class="mxh">
-						<div>06</div>
-						<img src="http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_2,w_60,h_60" />
-						<div>
-							<div>木偶人</div>
-							<div>薛之谦</div>
-						</div>
-					</div>
+					</div>-->
 					<div class="query">
-						查看完整榜单>
+						<a href="javascript:;">查看完整榜单></a>
 					</div>
 				</div>
 			</div>
@@ -233,107 +139,156 @@
 		<div class="f5">
 			<div class="ph">
 					<div>热门歌手</div>
-					<p>更多</p>
+					<a href="javascript:;">更多</a>
 			</div>
 			<div class="gs">
-				<div class="rm">
-					<img src="../../public/img/index/xzq.jpg" />
+				<!--<div class="rm">
+					<img src="http://qukufile2.qianqian.com/data2/pic/140d09665d1c204efe00973c3e16282c/612757841/612757841.jpg@s_2,w_250,h_250" />
 					<p>薛之谦</p>
-				</div>
-				<div class="rm">
-					<img src="../../public/img/index/xzq.jpg" />
-					<p>薛之谦</p>
-				</div>
-				<div class="rm">
-					<img src="../../public/img/index/xzq.jpg" />
-					<p>薛之谦</p>
-				</div>
-				<div class="rm">
-					<img src="../../public/img/index/xzq.jpg" />
-					<p>薛之谦</p>
-				</div>
-				<div class="rm">
-					<img src="../../public/img/index/xzq.jpg" />
-					<p>薛之谦</p>
-				</div>
-				<div class="rm">
-					<img src="../../public/img/index/xzq.jpg" />
-					<p>薛之谦</p>
+				</div>-->
+				<div class="rm" v-for="(xzq,i) of xzqs" :key="i">
+					<div><a href="javascript:;"><img :src="xzq.imgUrl1" /></a></div>
+					<p>{{xzq.xname}}</p>
 				</div>
 			</div>
 		</div>
 		<div class="f6">
 			<div class="ph">
 					<div>精选MV</div>
-					<p>更多</p>
+					<a href="javascript:;">更多</a>
 			</div>
 			<div class="jx">
-				<div class="qyqx">
-					<img src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_1559299469ad147537931c9fd8ab1d9aeb53e9053a.jpg@s_2,w_556,h_314" />
-					<p>永远同在(电影《千与千寻》主题曲)</p>
-					<p>木村弓</p>
-				</div>
-				<div class="qyqx">
-					<img src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_1559299469ad147537931c9fd8ab1d9aeb53e9053a.jpg@s_2,w_556,h_314" />
-					<p>永远同在(电影《千与千寻》主题曲)</p>
-					<p>木村弓</p>
-				</div>
-				<div class="qyqx">
-					<img src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_1559299469ad147537931c9fd8ab1d9aeb53e9053a.jpg@s_2,w_556,h_314" />
-					<p>永远同在(电影《千与千寻》主题曲)</p>
-					<p>木村弓</p>
-				</div>
-				<div class="qyqx">
-					<img src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_1559299469ad147537931c9fd8ab1d9aeb53e9053a.jpg@s_2,w_556,h_314" />
-					<p>永远同在(电影《千与千寻》主题曲)</p>
-					<p>木村弓</p>
+				<img src="../../public/img/index/返回.png" />
+				<img src="../../public/img/index/更多.png" />
+				<div class="qy">
+					<!--<div class="qx">
+						<img src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_1559299469ad147537931c9fd8ab1d9aeb53e9053a.jpg@s_2,w_556,h_314" />
+						<p>永远同在(电影《千与千寻》主题曲)</p>
+						<p>木村弓</p>
+					</div>-->
+					<div class="qx" v-for="(item,i) of xlist" :key="i">
+						<a href="javascript:;">
+							<img :src="item.imgUrl2" />
+							<p>{{item.xdy}}</p>
+							<p>{{item.xname}}</p>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="f7">
 			<div class="ph">
 					<div>热门活动</div>
-					<p>更多</p>
+					<a href="javascript:;">更多</a>
 			</div>
 			<div class="hd">
-				<div class="hx">
+				<!--<div class="hx">
 					<img src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_15480660627d94bd0ab1c474c860a059c52b38f1fc.jpg@s_2,w_760,h_304" />
 					<p>少年红星音乐计划</p>
-				</div>
-				<div class="hx">
-					<img src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_15480660627d94bd0ab1c474c860a059c52b38f1fc.jpg@s_2,w_760,h_304" />
-					<p>少年红星音乐计划</p>
-				</div>
-				<div class="hx">
-					<img src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_15480660627d94bd0ab1c474c860a059c52b38f1fc.jpg@s_2,w_760,h_304" />
-					<p>少年红星音乐计划</p>
+				</div>-->
+				<div class="hx" v-for="(item,i) of slist" :key="i">
+					<a href="javascript:;">
+						<img :src="item.imgUrl3" />
+						<p>{{item.sname}}</p>
+					</a>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>	<MyFooter></MyFooter>
 	</div>
 </template>
 <script>
+import MyFooter from "../components/qq_music/MyFooter"
 export default {
     data() {
         return {
-            imgList:[{imgUrl:"http://musicugc.qianqian.com/ugcdiy/pic/7f0147a86aa4b592ebfea178d121d14c.jpg",title:"chill&LA"},
-			{imgUrl:"http://musicugc.qianqian.com/ugcdiy/pic/2cb0e25842cb462ef078a2269adf6809.jpg",title:"飞跃地球"},
-			{imgUrl:"http://musicugc.qianqian.com/ugcdiy/pic/cdfc38047a8a7a095c92c91ffc1825e1.jpg",title:"文青"},
-			{imgUrl:"http://musicugc.qianqian.com/ugcdiy/pic/f2533e1dcded12b3ccade7da424d2fcc.jpg",title:"我有一壶酒"},
-			{imgUrl:"http://musicugc.qianqian.com/ugcdiy/pic/a894bd47f1f8406af55be6477dcf953a.jpg",title:"纯音乐"},
-			{imgUrl:"http://musicugc.qianqian.com/ugcdiy/pic/ff4f363354ff8c9a579052e91c9d56fa.jpg",title:"华语经典 "},
-			{imgUrl:"http://musicugc.qianqian.com/ugcdiy/pic/9043c6c4c3c31c31df79082d439be049.jpg",title:"抄作业必备电音"},
-			{imgUrl:"http://musicugc.qianqian.com/ugcdiy/pic/9043c6c4c3c31c31df79082d439be049.jpg",title:"出道三十年精选"}]
-        }
+			task:[],
+			task1:[],
+			task2:[],
+			task3:[],
+				xzqs:[
+					{imgUrl1:"http://qukufile2.qianqian.com/data2/pic/140d09665d1c204efe00973c3e16282c/612757841/612757841.jpg@s_2,w_250,h_250",xname:"薛之谦"},
+					{imgUrl1:"http://qukufile2.qianqian.com/data2/pic/d06f59a51303f15f86a801b0e0c64f76/580384071/580384071.jpg@s_2,w_250,h_250",xname:"周华健"},
+					{imgUrl1:"http://qukufile2.qianqian.com/data2/pic/4e2f99725085e29afbe3004b34e3b3ea/566870515/566870515.jpg@s_2,w_250,h_250",xname:"龙梅子"},
+					{imgUrl1:"http://qukufile2.qianqian.com/data2/pic/246708025/246708025.jpg@s_2,w_250,h_250",xname:"林俊杰"},
+					{imgUrl1:"http://qukufile2.qianqian.com/data2/pic/0d8e3007d1cb42db293a80f12e9c4771/612860331/612860331.JPG@s_2,w_250,h_250",xname:"许嵩"},
+					{imgUrl1:"http://qukufile2.qianqian.com/data2/pic/246708144/246708144.jpg@s_2,w_250,h_250",xname:"刘若英"},
+									
+				],
+				xlist:[
+					{imgUrl2:"http://business.cdn.qianqian.com/qianqian/pic/bos_client_156275756788765ad8eaeacfb64a33d8317ee51f01.jpg@s_2,w_556,h_314",xdy:"为你着魔",xname:"信"},
+					{imgUrl2:"http://business.cdn.qianqian.com/qianqian/pic/bos_client_1562670860bf4ab6567298d1fd32c12bc46e8c3519.jpg@s_2,w_556,h_314",xdy:"灼人秘密",xname:"陈珊妮"},
+					{imgUrl2:"http://business.cdn.qianqian.com/qianqian/pic/bos_client_1562481394f080b581f3d7365c1aafc1dc44ca4941.jpg@s_2,w_556,h_314",xdy:"Glitter",xname:"Celeina"},
+					{imgUrl2:"http://business.cdn.qianqian.com/qianqian/pic/bos_client_1562239224cd761647fe2b70efdea824e4f569b45c.jpg@s_2,w_556,h_314",xdy:"夏日假期",xname:"曹格"}
+				],
+				slist:[
+					{imgUrl3:"http://business.cdn.qianqian.com/qianqian/pic/bos_client_15480660627d94bd0ab1c474c860a059c52b38f1fc.jpg@s_2,w_760,h_304",sname:"少年红星音乐计划"},
+					{imgUrl3:"http://business.cdn.qianqian.com/qianqian/pic/bos_client_15480662673c21cb33585df55ea59d202a537c0fc8.jpg@s_2,w_760,h_304",sname:"千千Nu创音乐榜"},
+					{imgUrl3:"http://business0.qianqian.com/qianqian/pic/bos_client_1562233714b509fe25c14d368fe296bd00c6e4f4ef.jpg@s_2,w_760,h_304",sname:"蔡琴 · 2019「好新琴」演唱会成都站赠票活动"}
+				],
+				bClass:[
+					{fade:true},
+					{fade:true},
+					{fade:true},
+					{fade:true},
+					{fade:true},
+					{fade:true},
+					{fade:true},
+					{fade:true}
+				],//刚运行时
+    		}
     },
+	methods:{
+		showBegin(e){
+				var idx=e.target.dataset.index;
+				this.bClass[idx].fade=!this.bClass[idx].fade;
+				console.log(idx)
+		},
+		hideBegin(e){
+				var idx=e.target.dataset.index;
+				this.bClass[idx].fade=!this.bClass[idx].fade;
+			
+		}
+	},
+	created(){
+      		//发送ajax请求 axios
+            var url="index";//请求地址
+            this.axios.get(url).then(result=>{
+				this.task=result.data;
+				console.log(result)
+            })
+			//发送ajax请求 axios
+            var url="index1";//请求地址
+            this.axios.get(url).then(result=>{
+				this.task1=result.data;
+				console.log(result)
+            })
+			//发送ajax请求 axios
+            var url="index2";//请求地址
+            this.axios.get(url).then(result=>{
+				this.task2=result.data;
+				console.log(result)
+            })
+			//发送ajax请求 axios
+            var url="index3";//请求地址
+            this.axios.get(url).then(result=>{
+				this.task3=result.data;
+				console.log(result)
+            })
+  },
+	components:{
+		MyFooter,
+	}
 }
 </script>
 <style scoped>
+	.fade{
+		display:none;
+	}
     #head{
             width: 100%;
             height: 50px;
-            background:#ccc;
+            background:#eee;
         }
         #head ul{
             width:70%;
@@ -360,45 +315,52 @@ export default {
             font-size:20px;
         }
         .left{
-            width: 650px;
+            width: 800px;
             height: 350px;
             margin-top: 50px;
         }
         #gd{
-            width: 630px;
+            width: 700px;
             height: 330px;
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
             margin-top: 20px;
         }
-        #gd>a{
-            text-decoration: none;
-            color: gray;
+		#gd>div{width:150px;height:150px;}
+        #gd>div {
+			position:relative;
         }
-		#gd>a p{
-			font-size:12px;
+		#gd>div p{
+			font-size:10px;
 			color:#333333;
 			}
-        #gd>a img{
+        #gd>div img:first-child{
             width: 150px;
             height: 150px;
-        }
-		#gd>a img{
 			transition:all 0.8s;
+        }
+		#gd>div img:nth-child(2){
+			width:40px;height:40px;
+			position:absolute;
+			top:55px;
+			left:55px;
 		}
-		#gd>a img:hover{
+		#gd>div img:first-child:hover{
 			transform:scale(1.05);
 		
 		}
-        #gd a:nth-child(5),#gd a:nth-child(6),#gd a:nth-child(7),#gd a:nth-child(8){
-            margin-top:55px;
+        #gd div:nth-child(5),#gd div:nth-child(6),#gd div:nth-child(7),#gd div:nth-child(8){
+            margin-top:70px;
         }
         .right{
             width: 400px;
             height: 400px;
             margin-top:80px;
         }
+		.right span:nth-child(2),.left span:nth-child(2){
+			margin-left:20px;
+		}
         .fl{
             display: flex;
             justify-content: space-around;
@@ -523,8 +485,12 @@ export default {
     }
     .container{
         width:1200px;
-        margin:90px auto;
+        margin:0 auto;
+		margin-top:150px;
     }
+	a{
+		text-decoration:none;
+	}
 	.f4,.f5,.f6,.f7{
 		width:100%;
 		margin-bottom:60px;
@@ -538,7 +504,7 @@ export default {
 		font-size:24px;
 		line-height:38px;
 	}
-	.ph>p{
+	.ph>a{
 		float:left;
 		line-height:22px;
 		font-size:14px;
@@ -546,70 +512,72 @@ export default {
 		padding:16px 16px 0;
 		box-sizing:border-box;
 	}
-	.xg{
+	.xg,.rg,.wlg{
 		width:32%;
 		border:1px solid #5B9400;
 	}
-	.xg:not(:first-child){
+	.xg:not(:first-child),.rg:not(:first-child),.wlg:not(:first-child){
 		margin-left:2%;
 	}
-	.xg>h2{
+	.xg>h2,.rg>h2,.wlg>h2{
 		height:66px;
 		color:#5B9400;
+		font-size:25px;
 		line-height:66px;
-		padding-left:8px;
+		padding-left:10px;
 		margin-bottom:10px;
 		background-color:rgba(91,148,0,.1);
 		box-sizing:border-box;
 	}
-	.xg>div>div{
+	.rg>h2{color:#db5800;background-color:rgba(219,88,0,.1);}
+	.wlg>h2{color:#21bfa6;background-color:rgba(20,88,200,.1);}
+	.xg>div>div,.rg>div>div,.wlg>div>div{
 		width:100%;
 		display:flex;
 	}
-	.mx,.mxh{
+	.mx{
 		height:64px;
-		padding:8px 10px;
+		padding:10px 10px;
 		box-sizing:border-box;
 	} 
-	.mx>div:last-child>div:first-child,
-	.mxh>div:last-child>div:first-child{
+	.dis{
+		display:flex;
+	}
+	.mx>div:last-child>div:first-child{
 		font-size:14px;
 		color:#333;
 	}
-	.mx>div:last-child>div:last-child,
-	.mxh>div:last-child>div:last-child{
+	.mx>div:last-child>div:last-child{
 		font-size:15px;
 		color:#999;
 	}
-	.mx>div:first-child{
+	.num{
 		font-size:20px;
 		align-items:center;
-		padding:8px 15px 0 15px;
+		padding:10px 15px 0 15px;
+		font-weight: 600;
+		color:#999;
+		box-sizing:border-box;
+	}
+	.three-num{
 		color:#5B9400;
-		box-sizing:border-box;
 	}
-	.mxh>div:first-child{
-		font-size:20px;
-		align-items:center;
-		padding:8px 15px 0 15px;
-		color:#777;
-		box-sizing:border-box;
-	}
-	.mx>img,
-	.mxh>img{
+	.mx>a>img{
 		width:48px;
 		height:48px;
 		margin-right:20px;
 	}
-	.query{
-		padding-left:60%;
-		padding-bottom:15px;
-		font-size:14px;
-		color:#999;
+	.xg>div>.query{
+		padding:10px 10px 30px;
 		box-sizing:border-box;
 	}
-	.dis{
-		display:flex;
+	.query>a{
+		margin-left:70%;
+		color:#999;
+		font-size:14px;
+	}
+	.query>a:hover{
+		color:#666;
 	}
 	.gs{
 		width:100%;
@@ -620,9 +588,19 @@ export default {
 	.rm{
 		width:11%;
 	}
-	.rm>img{
+	.rm>div{
+		width:126px;
+		height:126px;
+		border-radius:50%;
+	}
+	.rm>div img{
 		width:100%;
 		border-radius:50%;
+		transition: transform .5s ease;
+	}
+	.rm>div img:hover{
+		transform:scale(1.1);
+		transition:all .5s linear;
 	}
 	.rm:not(:first-child){
 		margin-left:7%;
@@ -634,31 +612,61 @@ export default {
 		font-size:15px;
 		color:#666;
 	}
-	.jx,.hd{
+	.jx{
 		width:100%;
+		position:relative;
+	}
+	.jx>.qy{
 		display:flex;
 	}
-	.jx>.qyqx{
+	.jx>.qy>.qx{
 		width:23%;
 	}
-	.jx>.qyqx>img{
-		width:100%;
+	.jx>img{
+		position:absolute;
+		width:5%;
+		height:60%;
+		color:#666;
+		top:10%;
 	}
-	.jx>.qyqx>p:last-child{
+	.jx>img:nth-child(1){
+		left:-80px;
+	}
+	.jx>img:nth-child(2){
+		right:-80px;
+	}
+	.jx>.qy>.qx>a>img{
+		width:100%;
+		transition: transform .5s ease;
+	}
+	.jx>.qy>.qx>a>img:hover{
+		transform:scale(1.05);
+		transition:all .5s linear;
+	}
+	.jx>.qy>.qx>a>p:last-child{
 		font-size:15px;
 		color:#999;
 	}
-	.jx>.qyqx:not(:first-child){
+	.jx>.qy>.qx:not(:first-child){
 		margin-left:2.6%;
+	}
+	.hd{
+		width:100%;
+		display:flex;
 	}
 	.hd>.hx{
 		width:32%;
 	}
-	.hd>.hx>img{
+	.hd>.hx>a>img{
 		width:100%;
+		transition: transform .5s ease;
 	}
-	.jx>.qyqx>p,
-	.hd>.hx>p{
+	.hd>.hx>a>img:hover{
+		transform:scale(1.05);
+		transition:all .5s linear;
+	}
+	.jx>.qy>.qx>a>p,
+	.hd>.hx>a>p{
 		font-size:14px;
 		color:#333;
 		text-align:center;
