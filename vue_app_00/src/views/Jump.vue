@@ -176,13 +176,11 @@
 			</div>
 		</div>
 	</div>
-	
 	<div id="bottom">
-		
 	</div>
     </div>
 </template>
-<<script>
+<script>
 export default {
     data(){
         return{

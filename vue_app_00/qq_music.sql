@@ -53,7 +53,21 @@ CREATE TABLE qq_music_netSong(
   seq_new_arrival TINYINT,
   seq_top_sale TINYINT
 );
+CREATE TABLE qq_music_songSheet(
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  img_url VARCHAR(200),
+  songName VARCHAR(10),
+  uid INT
+);
 /******写入数据******/
+/**************歌单*****************/
+INSERT INTO qq_music_songSheet VALUES
+(null,'http://qukufile2.qianqian.com/data2/pic/127029882/127029882.jpg@s_2,w_180,h_180','至少还有你',1),
+(null,'http://qukufile2.qianqian.com/data2/pic/49e6161afb13e3eda9d1cb4e304561a2/613960871/613960871.jpg@s_1,w_224,h_224','演员',1),
+(null,'http://qukufile2.qianqian.com/data2/pic/8ee49f2e4280cb34bf03e22eb30787fa/556189998/556189998.jpg@s_1,w_224,h_224','你不在的北京',1),
+(null,'http://qukufile2.qianqian.com/data2/pic/d60b07b632f301bae411ea65e2bf81b1/540728492/540728492.jpg@s_1,w_224,h_224','夜空中最亮的星',1),
+(null,'http://qukufile2.qianqian.com/data2/pic/3c929c9962fdcd053edac0f330a3189d/662233889/662233889.jpg@s_1,w_224,h_224','木偶人',1),
+(null,'http://qukufile2.qianqian.com/data2/pic/107442865/107442865.jpg@s_2,w_180,h_180','他不懂',1);
 /************用户表*************/
 INSERT INTO qq_music_user VALUES
 (null,'tom',md5('123'),"316575809@qq.com","15152457851"),

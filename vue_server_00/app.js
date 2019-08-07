@@ -128,3 +128,21 @@ server.get("/index3",(req,res)=>{
     }
   })
 })
+//完成第四个功能:
+//先登录操作成功后再查询歌单
+//查询指定用户歌单列表
+server.get("/songSheet",(req,res)=>{
+  //1:参数(无参数)
+  var uid = req.session.uid;
+  if(!uid){
+    res.send({code:-1,msg:"请登录"});
+    return;
+  }
+  //2:sql
+  var sql = "SELECT id,img_url,songName FROM qq_music_songSheet WHERE uid = ?";
+  pool.query(sql,[uid],(err,result)=>{
+    if(err)throw err;
+    res.send({code:1,data:result})
+  })
+  //3:json
+})

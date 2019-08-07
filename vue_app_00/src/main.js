@@ -12,9 +12,7 @@ import 'mint-ui/lib/style.css'
 Vue.use(MintUI);
 //4:引入图标字体样式文件
 import "./font/iconfont.css"
-import MyHeader from './components/qq_music/MyHeader'
 //将对象变为全局组件
-Vue.component("my-header",MyHeader);
 //5.引入axios.js文件
 import axios from "./axios"
 //6.引入vuex

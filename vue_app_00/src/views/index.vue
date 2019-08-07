@@ -2,14 +2,15 @@
 <div id="container">
     <div id="head">
         <ul>
-            <li><a href="">推荐</a></li>
-            <li><a href="">歌单</a></li>
-            <li><a href="">歌手</a></li>
-            <li><a href="">榜单</a></li>
-            <li><a href="">分类</a></li>
-            <li><a href="">MV</a></li>
-            <li><a href="">U榜</a></li>
+            <li><a href="javascript:;">推荐</a></li>
+            <li><a href="javascript:;">歌单</a></li>
+            <li><a href="javascript:;">歌手</a></li>
+            <li><a href="javascript:;">榜单</a></li>
+            <li><a href="javascript:;">分类</a></li>
+            <li><a href="javascript:;">MV</a></li>
+            <li><a href="javascript:;">U榜</a></li>
         </ul>
+		<!--=============================================-->
     </div>
     <div class="all">
         <div class="left">
@@ -28,18 +29,18 @@
             <span class="title">分类听歌</span>
             <span>更多</span>
             <div class="fl">
-            <a href="">情歌</a>
-            <a href="">红歌</a>
-            <a href="">劲爆</a>
-            <a href="">天籁</a>
-            <a href="">经典老歌</a>
-            <a href="">欧美</a>
-            <a href="">网络歌曲</a>
-            <a href="">民歌</a>
-            <a href="">80后</a>
-            <a href="">儿歌</a> 
-            <a href="">伤感</a>
-            <a href="">安静</a>
+            <a href="javascript:;">情歌</a>
+            <a href="javascript:;">红歌</a>
+            <a href="javascript:;">劲爆</a>
+            <a href="javascript:;">天籁</a>
+            <a href="javascript:;">经典老歌</a>
+            <a href="javascript:;">欧美</a>
+            <a href="javascript:;">网络歌曲</a>
+            <a href="javascript:;">民歌</a>
+            <a href="javascript:;">80后</a>
+            <a href="javascript:;">儿歌</a> 
+            <a href="javascript:;">伤感</a>
+            <a href="javascript:;">安静</a>
             </div>
             <span class="title">推荐电台</span>
             <span>更多</span>
@@ -194,11 +195,10 @@
 				</div>
 			</div>
 		</div>
-	</div>	<MyFooter></MyFooter>
+	</div>
 	</div>
 </template>
 <script>
-import MyFooter from "../components/qq_music/MyFooter"
 export default {
     data() {
         return {
@@ -242,13 +242,12 @@ export default {
 		showBegin(e){
 				var idx=e.target.dataset.index;
 				this.bClass[idx].fade=!this.bClass[idx].fade;
-				console.log(idx)
 		},
 		hideBegin(e){
 				var idx=e.target.dataset.index;
 				this.bClass[idx].fade=!this.bClass[idx].fade;
 			
-		}
+		},
 	},
 	created(){
       		//发送ajax请求 axios
@@ -276,9 +275,6 @@ export default {
 				console.log(result)
             })
   },
-	components:{
-		MyFooter,
-	}
 }
 </script>
 <style scoped>
@@ -309,7 +305,7 @@ export default {
             height:400px;
             display: flex;
             justify-content: space-around;
-            margin:0 auto;
+            margin:10px auto;
         }
         .title{
             font-size:20px;
